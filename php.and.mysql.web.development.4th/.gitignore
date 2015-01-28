@@ -1,0 +1,7 @@
+.gitignore.bak
+.gitignore~
+*.bak
+*~
+#*#
+.svn
+/PHP.and.MySQL.Web.Development/PHP-MySQL-4e-Source.rar
