@@ -1,0 +1,9 @@
+CPU 4次修改IP
+在每次读取的指令进入指令缓冲器之后，执行指令之前，jmp ax将ax中的值赋给IP
+mov ax,bx
+IP=IP+2
+sub ax,ax
+IP=IP+2 AX=0000H
+jmp ax
+IP=IP+2
+IP=0000H

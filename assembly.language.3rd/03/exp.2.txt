@@ -1,0 +1,37 @@
+(1)
+mov ax,ffff
+mov ds,ax
+
+mov ax,2200
+mov ss,ax
+
+mov sp,0100
+
+mov ax,[0]	;ax=5bea
+add ax,[2]	;ax=5cca
+mov bx,[4]	;bx=30f0
+add bx,[6]	;bx=6027
+
+push ax		;sp=00fe;[2200:00fe]=5cca
+push bx		;sp=00fc;[2200:00fc]=6027
+pop ax		;sp=00fe;ax=6027
+pop bx		;sp=0100;bx=5cca
+
+push [4]	;sp=00fe;[2200:00fe]=30f0
+push [6]	;sp=00fc;[2200:00fc]=2f37
+(2)
+t命令引发中断，中断使用了SS，SP。
+a
+mov ax,2000
+mov ss,ax
+mov sp,10
+mov ax,3123
+push ax
+mov ax,3366
+push ax
+e 2000:0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+d 2000:0 f
+r
+t
+t
+d 2000:0 f

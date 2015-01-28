@@ -1,0 +1,47 @@
+(1)
+see t1.asm
+
+(2)
+r
+ax=0 bx=0 ss=0bac sp=0
+t
+mov ax,2000h
+ax=2000
+t
+mov ss,ax
+mov sp,0
+ax=2000 bx=0 ss=2000 sp=0
+t
+add sp,10
+ax=2000 bx=0000 ss=2000 sp=000a
+d 2000:a
+[2000:a]=0000
+t
+pop ax
+ax=0000 bx=0000 ss=2000 sp=000c
+t
+pop bx
+ax=0000 bx=0000 ss=2000 sp=000e
+t
+push ax
+sp=000c [2000:000c]=0000
+t
+push bx
+sp=000a [2000:000a]=0000
+t
+pop ax
+ax=0000 sp=000c
+t
+pop bx
+bx=0000 sp=000e
+t
+mov ax,4c00h
+ax=4c00 bx=0000 ss=2000 sp=000e
+p
+int 21h
+q
+
+(3)
+r
+ds=0b9c
+d 0b9c:0
