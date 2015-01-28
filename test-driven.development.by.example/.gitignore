@@ -1,0 +1,16 @@
+.gitignore.bak
+.gitignore~
+*.bak
+*~
+.*~
+\#*\#
+.\#*
+
+.svn
+
+.metadata
+.settings
+bin
+classes
+
+*.pyc
