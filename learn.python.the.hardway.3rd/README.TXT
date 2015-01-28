@@ -1,0 +1,1 @@
+All Exercises are written in Linux!

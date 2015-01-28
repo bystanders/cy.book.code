@@ -1,0 +1,143 @@
+1.
+a>print ""
+b>print ''
+c>print "'"
+d>print '"'
+e># -*- coding: utf-8 -*-
+
+2.
+a>after # is all comments
+b>using # to "disable" code
+c># -*- coding: utf-8 -*- is workaround for problems with setting and detecting the format of a file
+d># in print "#" is not ignored
+
+3.
+a> + - / * % < > <= >=
+b>PEMDAS which stands for Parentheses Exponents Multiplication Division Addition Subtraction
+c> / is different between integer and floating point divide
+
+4.
+a>the difference between = (single-equal) and == (double-equal)
+b>print using "," to echo empty space
+
+5.
+a>print "%s %d %r" % (string, digital, raw)
+b>round(1.7333)
+
+6.
+a>print string_variable % variable
+b>print string1 + string2
+c>%r -> raw data vs. %s -> string
+
+7.
+a>print "." * 10
+b>"," is connect left with right as an empty space
+
+8.
+a>use %r for debugging
+b>print "%r %r %r %r" % (1, 2, 3, 4) didn't work in python 3 ?0
+
+9.
+a>print "\n" newline
+b>"""multiline strings here"""
+c>"\n" not work using %r
+
+10.
+a>\ is escape
+b>''' is same as """
+c>%r cause escape not work
+
+11.
+a>raw_input()
+b>'6\'2"'
+c>int(raw_input())
+d>avoid using input()
+e>u'35' is Unicode
+
+12.
+a>result = raw_input("?")
+b>open,file,os,sys
+c>%r is for debugging and is "raw representation" while %s is for display
+
+13.
+a>from sys import argv
+b>script, first, second, third = argv
+c>argv is the "argument variable"
+d>argv are all strings
+
+14.
+a>
+prompt = '>'
+x = raw_input(prompt)
+b>print """ %r
+""" % x
+
+15.
+a>
+print "Type the filename:"
+filename = raw_input("> ")
+txt = open(filename)
+print txt.read()
+txt.close()
+
+16.
+a>
+print "Type the filename:"
+filename = raw_input("> ")
+target = open(filename, 'w')
+print "Input line:"
+line1 = raw_input("line 1: ")
+target.write(line1)
+target.write("\n")
+print target.read()
+target.close()
+b>w+ r+ a+ is write plus read, read plus write, append plus read
+
+17.
+a>open(to_file,'w').write(open(from_file).read())
+b>len(open(from_file).read())
+c>from os.path import exists
+d>exists(to_file)
+
+18.
+a>def f1(*args):
+      arg1, arg2 = args
+      ...
+b>def f2(arg1, arg2):
+      ...
+c>def f3():
+      ...
+
+19.
+a>
+def f1(arg1, arg2):
+    ...
+a1 = 1
+a2 = 2
+f1(a1,a2)
+f1(a1+a2,a1*a2)
+b>The practical limit though is about five arguments before the function becomes annoying to use.
+
+20.
+a>f.seek(0)
+b>f.readline()
+c>x += y is x = x + y
+
+21.
+a>
+def add(a, b):
+    return a + b
+def subtract(a, b):
+    return a - b
+def multiply(a, b):
+    return a * b
+def divide(a, b):
+    return a / b
+
+age = add(30, 5)
+height = subtract(78, 4)
+weight = multiply(90, 2)
+iq = divide(100, 2)
+
+what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
+b>float(raw_input())
