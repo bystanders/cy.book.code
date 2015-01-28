@@ -1,0 +1,8 @@
+.gitignore.bak
+.gitignore~
+*.bak
+*~
+#*#
+.svn
+/Head.First.HTML.with.CSS.&.XHTML/HFHTML_code.zip
+/Head.First.HTML.with.CSS.&.XHTML/HFHTML_final.zip
