@@ -1,6 +1,6 @@
 package money;
 
-public class Money {
+public class Money implements Expression {
 
 	protected int amount;
 	protected String currency;
@@ -8,6 +8,14 @@ public class Money {
 	Money(int amount, String currency) {
 		this.amount = amount;
 		this.currency = currency;
+	}
+
+	public static Money dollar(int amount) {
+		return new Money(amount, "USD");
+	}
+
+	public static Money franc(int amount) {
+		return new Money(amount, "CHF");
 	}
 
 	public boolean equals(Object object) {
@@ -19,12 +27,13 @@ public class Money {
 		return amount + " " + currency;
 	}
 
-	static Money dollar(int amount) {
-		return new Money(amount, "USD");
+	public Expression plus(Money addend) {
+		return new Sum(this, addend);
 	}
 
-	static Money franc(int amount) {
-		return new Money(amount, "CHF");
+	public Money reduce(Bank bank, String to) {
+		int rate = bank.rate(currency, to);
+		return new Money(amount / rate, to);
 	}
 
 	protected String currency() {
