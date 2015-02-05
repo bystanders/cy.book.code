@@ -27,7 +27,7 @@ public class Money implements Expression {
 		return amount + " " + currency;
 	}
 
-	public Expression plus(Money addend) {
+	public Expression plus(Expression addend) {
 		return new Sum(this, addend);
 	}
 
@@ -36,12 +36,12 @@ public class Money implements Expression {
 		return new Money(amount / rate, to);
 	}
 
-	protected String currency() {
-		return currency;
+	public Expression times(int multiplier) {
+		return new Money(amount * multiplier, currency);
 	}
 
-	protected Money times(int multiplier) {
-		return new Money(amount * multiplier, currency);
+	protected String currency() {
+		return currency;
 	}
 
 }
