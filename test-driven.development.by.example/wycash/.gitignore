@@ -11,8 +11,8 @@
 .settings
 .idea
 classes
+bin
 
 *.class
-*.pyc
 .classpath
 .project

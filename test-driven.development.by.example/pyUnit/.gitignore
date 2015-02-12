@@ -7,12 +7,6 @@
 .\#*
 
 .svn
-.metadata
-.settings
 .idea
-classes
 
-*.class
 *.pyc
-.classpath
-.project
