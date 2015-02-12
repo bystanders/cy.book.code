@@ -5,16 +5,17 @@ except ImportError:
     from distutils.core import setup
 
 config = {
-    'description': 'My Project',
-    'author': 'My Name',
+    'name': 'projectname',
+    'version': '0.1',
+    'packages': ['NAME'],
     'url': 'URL to get it at.',
     'download_url': 'Where to download it.',
-    'author_email': 'My email.',
-    'version': '0.1',
+    'license': '$License',
+    'author': 'My Name',
+    'author_email': 'My email',
     'install_requires': ['nose'],
-    'packages': ['NAME'],
     'scripts': [],
-    'name': 'projectname'
+    'description': 'My Project'
 }
 
 setup(**config)
