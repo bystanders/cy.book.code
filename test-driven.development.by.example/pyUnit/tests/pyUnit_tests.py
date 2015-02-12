@@ -4,17 +4,9 @@ from pyUnit.pyUnit import WasRun, TestCase
 
 
 class TestCaseTest(TestCase):
-    def testRunning(self):
+    def testTemplateMethod(self):
         test = WasRun("testMethod")
-        assert(not test.wasRun)
         test.run()
-        assert(test.wasRun)
+        assert("setUp testMethod tearDown" == test.log)
 
-TestCaseTest("testRunning").run()
-
-#def setup():
-#    print "SETUP!"
-
-#def teardown():
-#    print "TEAR DOWN!"
-
+TestCaseTest("testTemplateMethod").run()
