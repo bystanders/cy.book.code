@@ -16,3 +16,4 @@ classes
 *.pyc
 .classpath
 .project
+.pydevproject
